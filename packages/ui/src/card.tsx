@@ -1,14 +1,13 @@
-export function Card({
-  className,
-  title,
-  children,
-  href,
-}: {
+import { FC, ReactNode } from 'react';
+
+type CardProps = {
   className?: string;
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
   href: string;
-}): JSX.Element {
+};
+
+const Card: FC<CardProps> = ({ className, title, children, href }) => {
   return (
     <a
       className={className}
@@ -22,4 +21,6 @@ export function Card({
       <p>{children}</p>
     </a>
   );
-}
+};
+
+export default Card;
