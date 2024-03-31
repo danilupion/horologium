@@ -1,0 +1,14 @@
+{
+  "name": "@horologium-config/lint-staged",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/config/index.js",
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix --max-warnings=0"
+  },
+  "dependencies": {
+    "lint-staged": "^15.2.2"
+  }
+}

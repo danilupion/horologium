@@ -1,15 +1,19 @@
 {
-  "name": "@horologium/ui",
+  "name": "@horologium/client",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "exports": {
-    "./*": "./src/*"
-  },
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint . --max-warnings=0",
-    "lint:fix": "eslint . --fix --max-warnings=0",
-    "generate:component": "turbo gen react-component"
+    "lint:fix": "eslint . --fix --max-warnings=0"
+  },
+  "dependencies": {
+    "next": "^14.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "@types/eslint": "^8.56.7",
@@ -20,10 +24,11 @@
     "@horologium-config/eslint": "workspace:*",
     "@horologium-config/lint-staged": "workspace:*",
     "@horologium-config/typescript": "workspace:*",
-    "@turbo/gen": "^1.13.2",
     "@types/node": "^20.12.6",
     "@types/react": "^18.2.75",
     "@types/react-dom": "^18.2.24",
-    "react": "^18.2.0"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   }
 }
