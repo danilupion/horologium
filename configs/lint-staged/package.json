@@ -1,0 +1,9 @@
+{
+  "name": "@horologium-config/lint-staged",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*"
+  }
+}
