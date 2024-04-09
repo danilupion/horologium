@@ -1,0 +1,33 @@
+{
+  "name": "@horologium/shell",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3000",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
+    "start": "next start -p 3000",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix --max-warnings=0"
+  },
+  "dependencies": {
+    "@module-federation/nextjs-mf": "^8.3.3",
+    "next": "^14.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.91.0"
+  },
+  "peerDependencies": {
+    "@types/eslint": "^8.56.7",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@horologium-config/eslint": "workspace:*",
+    "@horologium-config/lint-staged": "workspace:*",
+    "@horologium-config/typescript": "workspace:*",
+    "@types/node": "^20.12.6",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18.2.24"
+  }
+}
