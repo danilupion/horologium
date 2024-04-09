@@ -3,10 +3,9 @@ import NextFederationPlugin from '@module-federation/nextjs-mf';
 
 const CLIENT_APP_URL = process.env.NEXT_CLIENT_APP_URL || 'http://localhost:3001';
 
-const remotes = (isServer) => {
-  const location = isServer ? 'ssr' : 'chunks';
+const remotes = () => {
   return {
-    client: `client@${CLIENT_APP_URL}/_next/static/${location}/remoteEntry.js`,
+    client: `client@${CLIENT_APP_URL}/_next/static/chunks/remoteEntry.js`,
   };
 };
 
@@ -19,7 +18,7 @@ export default {
         new NextFederationPlugin({
           name: 'shell',
           filename: 'static/chunks/remoteEntry.js',
-          remotes: remotes(options.isServer),
+          remotes: remotes(),
           exposes: {
             './home': './src/pages/index.tsx',
           },
